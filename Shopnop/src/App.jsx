@@ -1,6 +1,7 @@
 import { Route, Routes, useLocation } from 'react-router-dom'
 import Navbar from './Components/Navbar'
 import Home from './Pages/Home'
+import Footer from './Components/Footer';
 
 function App() {
   const isSellerPath = useLocation().pathname.includes("seller");
@@ -14,6 +15,7 @@ function App() {
                 <Route path='/' element={<Home />} />
             </Routes>
         </div>
+        {isSellerPath ? null : <Footer />}
     </div>
    </>
   )
