@@ -33,9 +33,6 @@ import dairy_product_image from "./dairy_product_image.png";
 import bakery_image from "./bakery_image.png";
 import grain_image from "./grain_image.png";
 import potato_image_1 from "./potato_image_1.png";
-import potato_image_2 from "./potato_image_2.png";
-import potato_image_3 from "./potato_image_3.png";
-import potato_image_4 from "./potato_image_4.png";
 import tomato_image from "./tomato_image.png";
 import carrot_image from "./carrot_image.png";
 import apple_image from "./apple_image.png";
@@ -208,7 +205,8 @@ export const dummyProducts = [
     category: "Vegetables",
     price: 25,
     offerPrice: 20,
-    image: [potato_image_1, potato_image_2, potato_image_3, potato_image_4],
+    image: [potato_image_1,potato_image_1,potato_image_1,potato_image_1],
+    
     description: [
       "Fresh and organic",
       "Rich in carbohydrates",
@@ -216,7 +214,7 @@ export const dummyProducts = [
     ],
     createdAt: "2025-03-25T07:17:46.018Z",
     updatedAt: "2025-03-25T07:18:13.103Z",
-    inStock: false,
+    inStock: true,
   },
   {
     _id: "gd47g34h",

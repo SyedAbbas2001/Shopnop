@@ -8,6 +8,8 @@ export const AppContextProvider = ({ children }) => {
     const navigate = useNavigate();
     const [user, setUser] = useState(true);
     const [isSeller, setIsSeller] = useState(false);
+    const [showUserLogin, setShowUserLogin] = useState(false);
+    const [searchTerm, setSearchTerm] = useState('');
     const [products, setProducts] = useState([]);
     const Currency = import.meta.env.VITE_CURRENCY;
 
@@ -19,7 +21,7 @@ export const AppContextProvider = ({ children }) => {
       fetchProducts();
     }, []);
     
-    const value = { navigate, user, setUser, setIsSeller, isSeller ,products,Currency};
+    const value = { navigate, user, setUser, setIsSeller, isSeller ,products,Currency,showUserLogin,setShowUserLogin,searchTerm,setSearchTerm};
     
   return <AppContext.Provider value={value}>
     {children}
