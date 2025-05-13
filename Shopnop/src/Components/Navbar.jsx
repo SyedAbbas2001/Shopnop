@@ -33,7 +33,7 @@ const Navbar = () => {
   return (
     <>
       <nav className="flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 border-b border-gray-300 bg-white relative transition-all">
-        <NavLink to="/">
+        <NavLink to="/" onClick={() => setOpen(false)}>
           <img className="h-9" src={assets.logo} alt="dummyLogoColored" />
         </NavLink>
 
@@ -89,7 +89,7 @@ const Navbar = () => {
         </div>
 
         <button
-          onClick={() => (open ? setOpen(false) : setOpen(true))}
+          
           aria-label="Menu"
           className="sm:hidden"
         >
@@ -104,7 +104,7 @@ const Navbar = () => {
                 alt="cart"
                 className="w-6 opacity-80"
               />
-              <button className="absolute -top-2 -right-3 text-xs text-white bg-primary w-[18px] h-[18px] rounded-full">
+              <button onClick={() => setOpen(false)} className="absolute -top-2 -right-3 text-xs text-white bg-primary w-[18px] h-[18px] rounded-full">
                {getCartCount()}
               </button>
             </div>

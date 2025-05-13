@@ -31,6 +31,7 @@ const UpdateCartItem = (productId, newQuantity) => {
     ...prev,
     [productId]: newQuantity // ✅ Directly sets the selected value
   }));
+  toast.success("Cart Updated");
 };
 
 // Remove from Cart - optimized
